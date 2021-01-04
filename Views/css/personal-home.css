@@ -1,0 +1,56 @@
+/* menu.php */
+body{
+    padding: 8px;
+}
+#resultado {
+    background-color: white;
+    color: #777777;
+    margin-top: 5px; 
+    border: 1px solid #cecdcd; 
+    font-size: larger;
+}
+
+.sidebar{
+height: 100%;
+
+}
+
+#pesquisa {
+   outline: none;
+   border: none;
+   height: 40px;
+   width: 100%;
+   border-radius: 0px;
+}
+
+#pesquisa:focus {
+    border: none;
+    border-bottom: 2px solid blue;
+}
+.conteudo-menu{
+    margin: 5px;
+}
+
+.container{
+    margin-left: 16%;
+    
+}
+
+
+/** fatura.php */
+
+.fatura{
+    border: solid 1px #bdbdbd;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+}
+
+.fechar-fatura {
+    background-color: rgba(0,0,0,.6);
+    margin-left: 17%;
+    margin-top: 3.5%;
+    width: 48%;
+    padding: 10px;
+}
