@@ -54,3 +54,10 @@ height: 100%;
     width: 48%;
     padding: 10px;
 }
+.b2{
+padding: 0px;
+margin: 0px;
+height: 10px;
+width: 10px;
+border-radius: 5px;
+}

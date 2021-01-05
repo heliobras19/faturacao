@@ -12,7 +12,7 @@
     <title>Home Page</title>
     <style>
     body {
-        background-image: url("views/img/bg_top_img.jpg");
+        background-image: url("views/img/1.jpg");
     }
     </style>
 </head>
@@ -22,12 +22,12 @@
         <nav class="col-md-2 d-none d-md-block sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column conteudo-menu">
-                    <form>
-                        <input type="text" onkeyup="pesquisar()" id="pesquisa" placeholder="pesquisar produto...">
-                        <div id="resultado">
-                            o resultado fica aqui
-                        </div>
-                    </form>
+
+                    <input type="text" onkeyup="pesquisar()" id="pesquisa" placeholder="pesquisar produto...">
+                    <div id="resultado">
+                        o resultado fica aqui
+                    </div>
+
                 </ul>
             </div>
         </nav>

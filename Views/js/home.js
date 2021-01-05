@@ -11,7 +11,10 @@ function pesquisar() {
             data: { id: valor },
             success: function (dados) {
                 for (let i = 0; i < dados.length; i++) {
-                    res.innerHTML += dados[i]['nome'] + "<i class='fa fa-plus'></i><br>"
+                    let nome = dados[i]['nome']
+                    let preco = dados[i]['preco']
+                    res.innerHTML += nome +
+                        `<div class='text-left'><button id='al1' onclick='addFatura('${preco, nome}')' class='btn btn-primary b2'><i class='fa fa-plus'></i> </button><div><hr>`
                 }
 
             },
@@ -21,6 +24,14 @@ function pesquisar() {
         })
 }
 
+function addFatura(nome_prod, preco_prod) {
+    console.log(nome_prod)
+}
+
 $('#pesquisa').blur(function () {
     // res.innerHTML = '';
+})
+
+$('#al1').click(function () {
+    alert('funfa')
 })
