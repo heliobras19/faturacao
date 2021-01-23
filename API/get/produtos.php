@@ -1,6 +1,6 @@
 <?php
-//header('Content-type: application/json');
-include '../conexao.php';
+header('Content-type: application/json');
+include 'conexao.php';
 
 class produtos extends conexao
 {
@@ -17,9 +17,6 @@ class produtos extends conexao
         } else {
             $retorno = [];
         }
-        return json_encode($retorno);
+        echo json_encode($retorno);
     }
 }
-
-$c = new produtos;
-echo $c->pesquisar($_POST['id']);

@@ -27,11 +27,13 @@ class Core
         if (count($url) > 0) {
             $parametro = $url;
         }
-        $caminho = 'get/' . $class . '.php';
-        if (file_exists($caminho)) {
+        $caminho = 'get/' . $class . '.php' . '/' . $funcao . '/' . $parametro[0];
+        $arquivo = 'get/' . $class . '.php';
+        if (file_exists($arquivo) && method_exists($class, $funcao)) {
             $c = new $class;
             call_user_func_array(array($c, $funcao),  $parametro);
+        } else {
+            echo $caminho;
         }
-        return $caminho;
     }
 }
