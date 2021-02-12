@@ -19,4 +19,9 @@ class produtos extends conexao
         }
         echo json_encode($retorno);
     }
+
+    public function comprar()
+    {
+        $data = file_get_contents("php://input");
+    }
 }

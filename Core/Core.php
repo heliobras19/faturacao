@@ -19,7 +19,6 @@ class Core
             $url = explode('/', $url);
             $controller = $url[0] . 'Controller'; //classe
             array_shift($url);
-
             if (isset($url[0]) && !empty($url[0])) {
                 $metodo = $url[0];
                 array_shift($url);
@@ -35,7 +34,7 @@ class Core
             $metodo = 'index';
         }
 
-        $caminho = 'mvc/controllers/' . $controller . 'php';
+        $caminho = 'controllers/' . $controller . 'php';
         if (!file_exists($caminho) && !method_exists($controller, $metodo)) {
             $controller = 'homeController';
             $metodo = 'index';

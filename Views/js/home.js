@@ -1,5 +1,8 @@
 res = document.getElementById('resultado')
 var prodFatura = []
+var prod_lista = []
+var j = 0
+var x = 0
 function pesquisar() {
     var valor = document.getElementById('pesquisa').value
     res.innerHTML = '';
@@ -31,17 +34,29 @@ function addFatura(nome, preco, id) {
     if (prodFatura.indexOf(id) > -1) {
         alert('ja foi posto')
     } else {
-
+        var qtd;
+        let id_preco_tot = Math.sqrt(id) * 0.15
         let fatura = document.getElementById('produtos')
-        let qtd = document.getElementById('qtd')
-        //alert(preco_pag)
-
-        let addProd = `<tr><td>${nome}</td> <td><input id='${id}' onkeypress='(addAray(${id}, ${preco}))' type='number' value='1' style="width: 20%;"> </td> <td> ${preco}.00 kz </td> <td>${preco_pag}</td></tr>`
+        var preco_pag = 0;
+        let addProd = `<tr><td>${nome}</td> <td> <input id='${id}' type='number' min='0' oninput='total(${id}, ${preco}, ${id_preco_tot})' value='1' style="width: 20%;"> </td>
+                            <td id='precoUni'> ${preco}.00 kz </td> 
+                            <td> <input type='text' id='${id_preco_tot}' readonly> </td>
+                        </tr>`
         fatura.innerHTML += addProd
-
+        qtd = parseInt(document.getElementById(id).value)
         prodFatura.push(id)
+        prod_lista[j] = Array(id, nome, preco, qtd)
+        j++
     }
+}
 
+function total(id, preco, exibir) {
+    let qtd_preco = parseInt(document.getElementById(id).value)
+    document.getElementById(exibir).value = qtd_preco * preco
+    var total = document.getElementById('total_pag')
+    var total_print = qtd_preco * preco
+    x = x + total_print
+    total.innerHTML = x
 }
 
 function addAray(nome, preco) {
@@ -51,10 +66,15 @@ function addAray(nome, preco) {
 }
 
 
-$('#pesquisa').blur(function () {
-    // res.innerHTML = '';
+$('#faturar').click(function () {
+    fatura(prod_lista)
+    print()
 })
 
-$('#al1').click(function () {
-    alert('funfa')
-})
+function fatura(toSend) {
+    const jsonString = JSON.stringify(toSend)
+    const xhr = new XMLHttpRequest()
+    xhr.open('POST', 'http')
+    xhr.setRequestHeader("Content-Type", "application/json")
+    xhr.send(jsonString)
+}

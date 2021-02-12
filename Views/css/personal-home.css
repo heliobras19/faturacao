@@ -61,3 +61,13 @@ height: 10px;
 width: 10px;
 border-radius: 5px;
 }
+
+.left{
+ background-color: rgba(0,0,0,.6);
+ position: fixed;
+  right: 10px;
+  top: 1.5%;
+  width: 22%;
+ padding: 8px;
+color: white;
+}

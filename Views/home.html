@@ -1,5 +1,5 @@
 <div class="fatura">
-    <table class="table">
+    <table class="table thead-dark">
         <thead>
             <th> <i class="fa fa-cart-plus"></i> Produto</th>
             <th> <i class="fa fa-qrcode"></i> Quantidade</th>
@@ -11,8 +11,10 @@
     </table>
 
 </div>
-<div class=" fechar-fatura fixed-bottom ">
-    <button class="btn btn-dark">Faturar</button>
+<div class=" left ">
+    <button class="btn btn-dark" id="faturar">Faturar</button>
     <button class="btn btn-danger">Cancelar</button>
     <button class="btn btn-primary">Admin</button>
+    <hr>
+    Total : <div id="total_pag">00 USD</div>
 </div>

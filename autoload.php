@@ -7,5 +7,7 @@ spl_autoload_register(function ($nome_arquivo) {
         require 'Core/' . $nome_arquivo . '.php';
     } elseif (file_exists('Models/' . $nome_arquivo . '.php')) {
         require 'Models/' . $nome_arquivo . '.php';
+    } elseif (file_exists('Controllers/http_request/' . $nome_arquivo . '.php')) {
+        require 'Controllers/http_request/' . $nome_arquivo . '.php';
     }
 });
