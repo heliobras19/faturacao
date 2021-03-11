@@ -1,7 +1,19 @@
 /* menu.php */
 body{
-    padding: 8px;
+padding: 8px;
+font-family: 'Montserrat', sans-serif;
+background: linear-gradient(60deg, #00cafca2 0%, #e251f8ad 100%);
 }
+
+nav ul {
+  
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    display: inline;
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
 #resultado {
     background-color: white;
     color: #777777;
@@ -12,7 +24,6 @@ body{
 
 .sidebar{
 height: 100%;
-
 }
 
 #pesquisa {
@@ -40,11 +51,12 @@ height: 100%;
 /** fatura.php */
 
 .fatura{
-    border: solid 1px #bdbdbd;
+    border: none;
+    margin-top: 5px;
     width: 60%;
     height: 100%;
-    background-color: rgba(0,0,0,.6);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .fechar-fatura {
@@ -63,11 +75,63 @@ border-radius: 5px;
 }
 
 .left{
- background-color: rgba(0,0,0,.6);
- position: fixed;
-  right: 10px;
+ position: relative;
   top: 1.5%;
   width: 22%;
  padding: 8px;
 color: white;
+}
+
+.espaco {
+height: 10px;
+}
+
+.pading{
+padding-right: 10px;
+}
+
+.btn-violeto{
+color: white;
+background-color: purple;
+}
+
+.card{
+margin-top: 5px;
+margin-left: 20px;
+background-color: white;
+color: black;
+height: 100px;
+width: 100px;
+border-radius: 40px;
+}
+.moeda{
+text-align: right;
+position: relative;
+}
+
+.valor{
+font-size: 20px;
+
+color: purple;
+}
+.card small {
+ font-weight: bold;
+}
+
+.border-none {
+border: none;
+}
+
+table{
+box-shadow: #777777 solid 3px;
+}
+
+i{
+margin-right: -10px;
+margin-left: 10px;
+cursor: pointer;
+}
+i:hover{
+color: #0026ff;
+transition: .5s;
 }

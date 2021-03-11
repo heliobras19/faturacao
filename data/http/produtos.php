@@ -22,6 +22,9 @@ class produtos extends conexao
 
     public function comprar()
     {
-        $data = file_get_contents("php://input");
+        $quantidade = $_POST['quantidade'];
+        $fatura = $_POST['fatura'];
+        $id = $_POST['id'];
+        print_r($this->insert($quantidade, $id, $fatura));
     }
 }

@@ -2,6 +2,11 @@
 header('Content-type: application/json');
 class http
 {
+    public function __construct()
+    {
+        $this->request();
+        print_r($this->request());
+    }
     public function request()
     {
         $url  = 'API/produtos/comprar';

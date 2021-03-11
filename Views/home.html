@@ -1,10 +1,10 @@
 <div class="fatura">
-    <table class="table thead-dark">
+    <table class="table moserat thead-dark">
         <thead>
-            <th> <i class="fa fa-cart-plus"></i> Produto</th>
-            <th> <i class="fa fa-qrcode"></i> Quantidade</th>
-            <th> <i class="fa fa-dollar-sign"></i> Preço unitario</th>
-            <th> <i class="fa fa-money-bill"></i> Preço a pagar</th>
+            <th> Produto</th>
+            <th> Quantidade</th>
+            <th> Valor unitario</th>
+            <th> Valor Total</th>
         </thead>
         <tbody id="produtos">
         </tbody>
@@ -12,9 +12,33 @@
 
 </div>
 <div class=" left ">
-    <button class="btn btn-dark" id="faturar">Faturar</button>
-    <button class="btn btn-danger">Cancelar</button>
-    <button class="btn btn-primary">Admin</button>
-    <hr>
-    Total : <div id="total_pag">00 USD</div>
+    <button class="btn btn-violeto" id="faturar"><i class="fa fa-cart-arrow-down"></i> FINALIZAR VENDA (F8)</button>
+    <div class="row">
+        <div class="card moserat">
+            <small>
+                Total
+            </small>
+            <br>
+            <p id="total_pag" class="valor">00</p>
+            <p class="moeda">Kz</p>
+        </div>
+        <div class="card moserat">
+            <small>
+                Desconto
+            </small>
+            <br>
+            <p class="valor">00</p>
+            <p class="moeda">Kz</p>
+        </div>
+    </div>
+</div>
+
+<!--Modal Relatorios-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
 </div>
